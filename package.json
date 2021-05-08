@@ -2,10 +2,14 @@
   "name": "soln-3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon dist/server.js"
+    "start": "node dist/server.js",
+    "start:dev": "nodemon dist/server.js"
+  },
+  "engines": {
+    "node": "14.8.0"
   },
   "keywords": [],
   "author": "Huey",

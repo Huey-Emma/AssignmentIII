@@ -1,6 +1,4 @@
-require('dotenv').config({
-  path: process.cwd() + '/config/config.env',
-});
+require('dotenv').config();
 
 const { createServer } = require('http');
 

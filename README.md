@@ -49,7 +49,7 @@
 # Create a User
 
 - URL
-  /api/v1/users
+  /api/v1/user
 
 - Method
   POST
@@ -99,7 +99,7 @@
 # Show A User
 
 - URL
-  /api/v1/users/:userId
+  /api/v1/user/:userId
 
 - Method
   GET
@@ -141,7 +141,7 @@
 # Update A User
 
 - URL
-  /api/v1/users/:userId
+  /api/v1/user/:userId
 
 - Method
   PATCH
@@ -190,7 +190,7 @@
 # Delete A User
 
 - URL
-  /api/v1/users/:userId
+  /api/v1/user/:userId
 
 - Method
   DELETE

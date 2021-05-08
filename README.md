@@ -1,11 +1,11 @@
 # BASE URL
 
-[contact-app](https://desolate-forest-56369.herokuapp.com/api/v1/user)
+[contact-app](https://desolate-forest-56369.herokuapp.com)
 
 # Show All Users
 
 - URL
-  /api/v1/users
+  /api/v1/user
 
 - Method
   GET

@@ -5,19 +5,21 @@ const userRoutes = require('../routes/user');
 const NAMESPACE = 'App';
 const app = express();
 
-app.use((req, res, next) => {
-  info(
-    NAMESPACE,
-    `METHOD - ${req.method} URL - ${req.url} IP - ${req.socket.remoteAddress}`
-  );
-  res.on('finish', () => {
+if (process.env.NODE_ENV === 'development') {
+  app.use((req, res, next) => {
     info(
       NAMESPACE,
-      `METHOD - ${req.method} URL - ${req.url} IP - ${req.socket.remoteAddress} STATUS - ${res.statusCode}`
+      `METHOD - ${req.method} URL - ${req.url} IP - ${req.socket.remoteAddress}`
     );
+    res.on('finish', () => {
+      info(
+        NAMESPACE,
+        `METHOD - ${req.method} URL - ${req.url} IP - ${req.socket.remoteAddress} STATUS - ${res.statusCode}`
+      );
+    });
+    next();
   });
-  next();
-});
+}
 
 app.use(
   express.json({
